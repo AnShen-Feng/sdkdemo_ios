@@ -1,0 +1,182 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-alias RtcCore=LiveKitClient -enable-bare-slash-regex -module-name partnersdk_ios
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class RtcClient {
+  public typealias EventHandler = @Sendable (partnersdk_ios.RtcEvent) -> Swift.Void
+  public typealias StateHandler = @Sendable (partnersdk_ios.RtcRoomState) -> Swift.Void
+  public typealias ParticipantsHandler = @Sendable ([partnersdk_ios.RtcParticipant]) -> Swift.Void
+  @_Concurrency.MainActor final public var state: partnersdk_ios.RtcRoomState {
+    get
+  }
+  @_Concurrency.MainActor final public var participants: [partnersdk_ios.RtcParticipant] {
+    get
+  }
+  @_Concurrency.MainActor final public var onEvent: partnersdk_ios.RtcClient.EventHandler?
+  @_Concurrency.MainActor final public var onStateChanged: partnersdk_ios.RtcClient.StateHandler?
+  @_Concurrency.MainActor final public var onParticipantsChanged: partnersdk_ios.RtcClient.ParticipantsHandler?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public static func create(config: partnersdk_ios.RtcConfig, authHeaderProvider: (any partnersdk_ios.AuthHeaderProvider)? = nil, urlSession: Foundation.URLSession = .shared) -> partnersdk_ios.RtcClient
+  #endif
+  @_Concurrency.MainActor final public func connect(_ params: partnersdk_ios.ConnectParams) async throws
+  @_Concurrency.MainActor final public func disconnect() async
+  @_Concurrency.MainActor final public func close()
+  @_Concurrency.MainActor final public func setMicrophoneMuted(_ muted: Swift.Bool) async throws
+  @_Concurrency.MainActor final public func muteParticipant(identity: Swift.String, muted: Swift.Bool) async throws
+  @_Concurrency.MainActor final public func kickParticipant(identity: Swift.String) async throws
+  @_Concurrency.MainActor final public func setParticipantRole(identity: Swift.String, role: partnersdk_ios.RoomRole) async throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor final public func listParticipants(roomId: Swift.String? = nil) async throws -> [partnersdk_ios.RtcParticipant]
+  #endif
+  public enum NetworkError : Swift.Error {
+    case invalidResponse
+    case httpStatus(code: Swift.Int, body: Swift.String)
+    case clientClosed
+  }
+  @objc deinit
+}
+public struct EndpointUrl : Swift.Hashable, Swift.Sendable {
+  public let value: Swift.String
+  public static func parse(_ input: Swift.String) throws -> partnersdk_ios.EndpointUrl
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseOrNull(_ input: Swift.String) -> partnersdk_ios.EndpointUrl?
+  #endif
+  public enum EndpointUrlError : Swift.Error {
+    case invalidUrl
+    public static func == (a: partnersdk_ios.EndpointUrl.EndpointUrlError, b: partnersdk_ios.EndpointUrl.EndpointUrlError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func == (a: partnersdk_ios.EndpointUrl, b: partnersdk_ios.EndpointUrl) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol AuthHeaderProvider : Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getAuthorizationHeaderValue() async -> Swift.String?
+  #endif
+}
+public struct AnyAuthHeaderProvider : partnersdk_ios.AuthHeaderProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(_ block: @escaping @Sendable () async -> Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getAuthorizationHeaderValue() async -> Swift.String?
+  #endif
+}
+public enum RoomRole : Swift.String, Swift.Sendable, Swift.Codable {
+  case host
+  case speaker
+  case listener
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct RtcConfig : Swift.Sendable {
+  public let webrtcServiceUrl: partnersdk_ios.EndpointUrl?
+  public let backendBaseUrl: partnersdk_ios.EndpointUrl
+  public let backendTokenPath: Swift.String
+  public let apiPrefix: Swift.String
+  public let ttlSeconds: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(webrtcServiceUrl: partnersdk_ios.EndpointUrl? = nil, backendBaseUrl: partnersdk_ios.EndpointUrl, backendTokenPath: Swift.String = "/webrtc/token", apiPrefix: Swift.String = "/webrtc", ttlSeconds: Swift.Int = 3600)
+  #endif
+}
+public struct RtcParticipant : Swift.Hashable, Swift.Sendable, Swift.Codable {
+  public let identity: Swift.String
+  public let name: Swift.String
+  public let isLocal: Swift.Bool
+  public init(identity: Swift.String, name: Swift.String, isLocal: Swift.Bool)
+  public static func == (a: partnersdk_ios.RtcParticipant, b: partnersdk_ios.RtcParticipant) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum RtcRoomState : Swift.Sendable {
+  case disconnected
+  case connecting
+  case connected
+  case error
+  public static func == (a: partnersdk_ios.RtcRoomState, b: partnersdk_ios.RtcRoomState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum RtcEvent : Swift.Sendable {
+  case participantJoined(identity: Swift.String)
+  case participantLeft(identity: Swift.String)
+  case error(message: Swift.String)
+}
+public struct ConnectParams : Swift.Sendable {
+  public let roomId: Swift.String
+  public let displayName: Swift.String?
+  public let role: partnersdk_ios.RoomRole?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(roomId: Swift.String, displayName: Swift.String? = nil, role: partnersdk_ios.RoomRole? = nil)
+  #endif
+}
+public struct RtcRoomInfo : Swift.Sendable, Swift.Codable {
+  public let roomId: Swift.String
+  public let status: partnersdk_ios.RtcRoomState
+  public let maxParticipants: Swift.Int?
+  public let metadata: [Swift.String : partnersdk_ios.JSONValue]?
+  public let hostIdentity: Swift.String
+  public let participantCount: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(roomId: Swift.String, status: partnersdk_ios.RtcRoomState, maxParticipants: Swift.Int?, metadata: [Swift.String : partnersdk_ios.JSONValue]?, hostIdentity: Swift.String, participantCount: Swift.Int?)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MediaCredentials : Swift.Sendable, Swift.Codable {
+  public let url: Swift.String
+  public let token: Swift.String
+  public init(url: Swift.String, token: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum JSONValue : Swift.Sendable, Swift.Codable, Swift.Hashable {
+  case string(Swift.String)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case bool(Swift.Bool)
+  case object([Swift.String : partnersdk_ios.JSONValue])
+  case array([partnersdk_ios.JSONValue])
+  case null
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: partnersdk_ios.JSONValue, b: partnersdk_ios.JSONValue) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension partnersdk_ios.RtcRoomState : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension partnersdk_ios.RtcClient : Swift.Sendable {}
+extension partnersdk_ios.EndpointUrl.EndpointUrlError : Swift.Equatable {}
+extension partnersdk_ios.EndpointUrl.EndpointUrlError : Swift.Hashable {}
+extension partnersdk_ios.RoomRole : Swift.Equatable {}
+extension partnersdk_ios.RoomRole : Swift.Hashable {}
+extension partnersdk_ios.RoomRole : Swift.RawRepresentable {}
+extension partnersdk_ios.RtcRoomState : Swift.Equatable {}
+extension partnersdk_ios.RtcRoomState : Swift.Hashable {}

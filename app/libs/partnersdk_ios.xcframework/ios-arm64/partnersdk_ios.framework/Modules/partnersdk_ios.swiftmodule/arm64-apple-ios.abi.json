@@ -1,0 +1,5220 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "partnersdk_ios",
+    "printedName": "partnersdk_ios",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RtcCore",
+        "printedName": "RtcCore",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcClient",
+        "printedName": "RtcClient",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcClientC5stateAA0C9RoomStateOvp",
+            "mangledName": "$s14partnersdk_ios9RtcClientC5stateAA0C9RoomStateOvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC5stateAA0C9RoomStateOvg",
+                "mangledName": "$s14partnersdk_ios9RtcClientC5stateAA0C9RoomStateOvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "participants",
+            "printedName": "participants",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[partnersdk_ios.RtcParticipant]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcParticipant",
+                    "printedName": "partnersdk_ios.RtcParticipant",
+                    "usr": "s:14partnersdk_ios14RtcParticipantV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcClientC12participantsSayAA0C11ParticipantVGvp",
+            "mangledName": "$s14partnersdk_ios9RtcClientC12participantsSayAA0C11ParticipantVGvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[partnersdk_ios.RtcParticipant]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcParticipant",
+                        "printedName": "partnersdk_ios.RtcParticipant",
+                        "usr": "s:14partnersdk_ios14RtcParticipantV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC12participantsSayAA0C11ParticipantVGvg",
+                "mangledName": "$s14partnersdk_ios9RtcClientC12participantsSayAA0C11ParticipantVGvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onEvent",
+            "printedName": "onEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((partnersdk_ios.RtcEvent) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.RtcEvent) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvp",
+            "mangledName": "$s14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((partnersdk_ios.RtcEvent) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(partnersdk_ios.RtcEvent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RtcEvent",
+                            "printedName": "partnersdk_ios.RtcEvent",
+                            "usr": "s:14partnersdk_ios8RtcEventO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvg",
+                "mangledName": "$s14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((partnersdk_ios.RtcEvent) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(partnersdk_ios.RtcEvent) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RtcEvent",
+                            "printedName": "partnersdk_ios.RtcEvent",
+                            "usr": "s:14partnersdk_ios8RtcEventO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvs",
+                "mangledName": "$s14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvs",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvM",
+                "mangledName": "$s14partnersdk_ios9RtcClientC7onEventyAA0cF0OYbcSgvM",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onStateChanged",
+            "printedName": "onStateChanged",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((partnersdk_ios.RtcRoomState) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.RtcRoomState) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcRoomState",
+                        "printedName": "partnersdk_ios.RtcRoomState",
+                        "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvp",
+            "mangledName": "$s14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((partnersdk_ios.RtcRoomState) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(partnersdk_ios.RtcRoomState) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RtcRoomState",
+                            "printedName": "partnersdk_ios.RtcRoomState",
+                            "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvg",
+                "mangledName": "$s14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((partnersdk_ios.RtcRoomState) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(partnersdk_ios.RtcRoomState) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RtcRoomState",
+                            "printedName": "partnersdk_ios.RtcRoomState",
+                            "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvs",
+                "mangledName": "$s14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvs",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvM",
+                "mangledName": "$s14partnersdk_ios9RtcClientC14onStateChangedyAA0c4RoomF0OYbcSgvM",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onParticipantsChanged",
+            "printedName": "onParticipantsChanged",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([partnersdk_ios.RtcParticipant]) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([partnersdk_ios.RtcParticipant]) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[partnersdk_ios.RtcParticipant]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RtcParticipant",
+                            "printedName": "partnersdk_ios.RtcParticipant",
+                            "usr": "s:14partnersdk_ios14RtcParticipantV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvp",
+            "mangledName": "$s14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([partnersdk_ios.RtcParticipant]) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([partnersdk_ios.RtcParticipant]) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[partnersdk_ios.RtcParticipant]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "RtcParticipant",
+                                "printedName": "partnersdk_ios.RtcParticipant",
+                                "usr": "s:14partnersdk_ios14RtcParticipantV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvg",
+                "mangledName": "$s14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([partnersdk_ios.RtcParticipant]) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([partnersdk_ios.RtcParticipant]) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[partnersdk_ios.RtcParticipant]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "RtcParticipant",
+                                "printedName": "partnersdk_ios.RtcParticipant",
+                                "usr": "s:14partnersdk_ios14RtcParticipantV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvs",
+                "mangledName": "$s14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvs",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvM",
+                "mangledName": "$s14partnersdk_ios9RtcClientC21onParticipantsChangedySayAA0C11ParticipantVGYbcSgvM",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "create",
+            "printedName": "create(config:authHeaderProvider:urlSession:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcClient",
+                "printedName": "partnersdk_ios.RtcClient",
+                "usr": "s:14partnersdk_ios9RtcClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcConfig",
+                "printedName": "partnersdk_ios.RtcConfig",
+                "usr": "s:14partnersdk_ios9RtcConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any partnersdk_ios.AuthHeaderProvider)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthHeaderProvider",
+                    "printedName": "any partnersdk_ios.AuthHeaderProvider",
+                    "usr": "s:14partnersdk_ios18AuthHeaderProviderP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSession",
+                "printedName": "Foundation.URLSession",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSURLSession"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC6create6config18authHeaderProvider10urlSessionAcA0C6ConfigV_AA04AuthhI0_pSgSo12NSURLSessionCtFZ",
+            "mangledName": "$s14partnersdk_ios9RtcClientC6create6config18authHeaderProvider10urlSessionAcA0C6ConfigV_AA04AuthhI0_pSgSo12NSURLSessionCtFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectParams",
+                "printedName": "partnersdk_ios.ConnectParams",
+                "usr": "s:14partnersdk_ios13ConnectParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC7connectyyAA13ConnectParamsVYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC7connectyyAA13ConnectParamsVYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC10disconnectyyYaF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC10disconnectyyYaF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC5closeyyF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC5closeyyF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMicrophoneMuted",
+            "printedName": "setMicrophoneMuted(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC18setMicrophoneMutedyySbYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC18setMicrophoneMutedyySbYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "muteParticipant",
+            "printedName": "muteParticipant(identity:muted:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC15muteParticipant8identity5mutedySS_SbtYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC15muteParticipant8identity5mutedySS_SbtYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "kickParticipant",
+            "printedName": "kickParticipant(identity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC15kickParticipant8identityySS_tYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC15kickParticipant8identityySS_tYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setParticipantRole",
+            "printedName": "setParticipantRole(identity:role:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RoomRole",
+                "printedName": "partnersdk_ios.RoomRole",
+                "usr": "s:14partnersdk_ios8RoomRoleO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC18setParticipantRole8identity4roleySS_AA04RoomG0OtYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC18setParticipantRole8identity4roleySS_AA04RoomG0OtYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "listParticipants",
+            "printedName": "listParticipants(roomId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[partnersdk_ios.RtcParticipant]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcParticipant",
+                    "printedName": "partnersdk_ios.RtcParticipant",
+                    "usr": "s:14partnersdk_ios14RtcParticipantV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC16listParticipants6roomIdSayAA0C11ParticipantVGSSSg_tYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC16listParticipants6roomIdSayAA0C11ParticipantVGSSSg_tYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Final",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NetworkError",
+            "printedName": "NetworkError",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "invalidResponse",
+                "printedName": "invalidResponse",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.RtcClient.NetworkError.Type) -> partnersdk_ios.RtcClient.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                        "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "partnersdk_ios.RtcClient.NetworkError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkError",
+                            "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                            "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO15invalidResponseyA2EmF",
+                "mangledName": "$s14partnersdk_ios9RtcClientC12NetworkErrorO15invalidResponseyA2EmF",
+                "moduleName": "partnersdk_ios"
+              },
+              {
+                "kind": "Var",
+                "name": "httpStatus",
+                "printedName": "httpStatus",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.RtcClient.NetworkError.Type) -> (Swift.Int, Swift.String) -> partnersdk_ios.RtcClient.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, Swift.String) -> partnersdk_ios.RtcClient.NetworkError",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkError",
+                            "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                            "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(code: Swift.Int, body: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "partnersdk_ios.RtcClient.NetworkError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkError",
+                            "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                            "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO10httpStatusyAESi_SStcAEmF",
+                "mangledName": "$s14partnersdk_ios9RtcClientC12NetworkErrorO10httpStatusyAESi_SStcAEmF",
+                "moduleName": "partnersdk_ios"
+              },
+              {
+                "kind": "Var",
+                "name": "clientClosed",
+                "printedName": "clientClosed",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.RtcClient.NetworkError.Type) -> partnersdk_ios.RtcClient.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                        "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "partnersdk_ios.RtcClient.NetworkError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkError",
+                            "printedName": "partnersdk_ios.RtcClient.NetworkError",
+                            "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO12clientClosedyA2EmF",
+                "mangledName": "$s14partnersdk_ios9RtcClientC12NetworkErrorO12clientClosedyA2EmF",
+                "moduleName": "partnersdk_ios"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14partnersdk_ios9RtcClientC12NetworkErrorO",
+            "mangledName": "$s14partnersdk_ios9RtcClientC12NetworkErrorO",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14partnersdk_ios9RtcClientC",
+        "mangledName": "$s14partnersdk_ios9RtcClientC",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EndpointUrl",
+        "printedName": "EndpointUrl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11EndpointUrlV5valueSSvp",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV5valueSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11EndpointUrlV5valueSSvg",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV5valueSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "parse",
+            "printedName": "parse(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EndpointUrl",
+                "printedName": "partnersdk_ios.EndpointUrl",
+                "usr": "s:14partnersdk_ios11EndpointUrlV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios11EndpointUrlV5parseyACSSKFZ",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV5parseyACSSKFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "parseOrNull",
+            "printedName": "parseOrNull(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.EndpointUrl?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrl",
+                    "printedName": "partnersdk_ios.EndpointUrl",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios11EndpointUrlV11parseOrNullyACSgSSFZ",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV11parseOrNullyACSgSSFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "EndpointUrlError",
+            "printedName": "EndpointUrlError",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "invalidUrl",
+                "printedName": "invalidUrl",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(partnersdk_ios.EndpointUrl.EndpointUrlError.Type) -> partnersdk_ios.EndpointUrl.EndpointUrlError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EndpointUrlError",
+                        "printedName": "partnersdk_ios.EndpointUrl.EndpointUrlError",
+                        "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "partnersdk_ios.EndpointUrl.EndpointUrlError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EndpointUrlError",
+                            "printedName": "partnersdk_ios.EndpointUrl.EndpointUrlError",
+                            "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO07invalidD0yA2EmF",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO07invalidD0yA2EmF",
+                "moduleName": "partnersdk_ios"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrlError",
+                    "printedName": "partnersdk_ios.EndpointUrl.EndpointUrlError",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrlError",
+                    "printedName": "partnersdk_ios.EndpointUrl.EndpointUrlError",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO2eeoiySbAE_AEtFZ",
+                "moduleName": "partnersdk_ios",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO9hashValueSivp",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO9hashValueSivp",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO9hashValueSivg",
+                    "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO9hashValueSivg",
+                    "moduleName": "partnersdk_ios",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO4hash4intoys6HasherVz_tF",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14partnersdk_ios11EndpointUrlV0cD5ErrorO",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV0cD5ErrorO",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11EndpointUrlV9hashValueSivp",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV9hashValueSivp",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11EndpointUrlV9hashValueSivg",
+                "mangledName": "$s14partnersdk_ios11EndpointUrlV9hashValueSivg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios11EndpointUrlV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV4hash4intoys6HasherVz_tF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EndpointUrl",
+                "printedName": "partnersdk_ios.EndpointUrl",
+                "usr": "s:14partnersdk_ios11EndpointUrlV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EndpointUrl",
+                "printedName": "partnersdk_ios.EndpointUrl",
+                "usr": "s:14partnersdk_ios11EndpointUrlV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios11EndpointUrlV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14partnersdk_ios11EndpointUrlV2eeoiySbAC_ACtFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios11EndpointUrlV",
+        "mangledName": "$s14partnersdk_ios11EndpointUrlV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthHeaderProvider",
+        "printedName": "AuthHeaderProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getAuthorizationHeaderValue",
+            "printedName": "getAuthorizationHeaderValue()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios18AuthHeaderProviderP016getAuthorizationD5ValueSSSgyYaF",
+            "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP016getAuthorizationD5ValueSSSgyYaF",
+            "moduleName": "partnersdk_ios",
+            "genericSig": "<τ_0_0 where τ_0_0 : partnersdk_ios.AuthHeaderProvider>",
+            "sugared_genericSig": "<Self where Self : partnersdk_ios.AuthHeaderProvider>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14partnersdk_ios18AuthHeaderProviderP",
+        "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP",
+        "moduleName": "partnersdk_ios",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyAuthHeaderProvider",
+        "printedName": "AnyAuthHeaderProvider",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyAuthHeaderProvider",
+                "printedName": "partnersdk_ios.AnyAuthHeaderProvider",
+                "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() async -> Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderVyACSSSgyYaYbccfc",
+            "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderVyACSSSgyYaYbccfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getAuthorizationHeaderValue",
+            "printedName": "getAuthorizationHeaderValue()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV016getAuthorizationE5ValueSSSgyYaF",
+            "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderV016getAuthorizationE5ValueSSSgyYaF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV",
+        "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AuthHeaderProvider",
+            "printedName": "AuthHeaderProvider",
+            "usr": "s:14partnersdk_ios18AuthHeaderProviderP",
+            "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RoomRole",
+        "printedName": "RoomRole",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "host",
+            "printedName": "host",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RoomRole.Type) -> partnersdk_ios.RoomRole",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RoomRole.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RoomRole",
+                        "printedName": "partnersdk_ios.RoomRole",
+                        "usr": "s:14partnersdk_ios8RoomRoleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RoomRoleO4hostyA2CmF",
+            "mangledName": "$s14partnersdk_ios8RoomRoleO4hostyA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "speaker",
+            "printedName": "speaker",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RoomRole.Type) -> partnersdk_ios.RoomRole",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RoomRole.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RoomRole",
+                        "printedName": "partnersdk_ios.RoomRole",
+                        "usr": "s:14partnersdk_ios8RoomRoleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RoomRoleO7speakeryA2CmF",
+            "mangledName": "$s14partnersdk_ios8RoomRoleO7speakeryA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "listener",
+            "printedName": "listener",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RoomRole.Type) -> partnersdk_ios.RoomRole",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RoomRole.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RoomRole",
+                        "printedName": "partnersdk_ios.RoomRole",
+                        "usr": "s:14partnersdk_ios8RoomRoleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RoomRoleO8listeneryA2CmF",
+            "mangledName": "$s14partnersdk_ios8RoomRoleO8listeneryA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.RoomRole?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios8RoomRoleO8rawValueACSgSS_tcfc",
+            "mangledName": "$s14partnersdk_ios8RoomRoleO8rawValueACSgSS_tcfc",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios8RoomRoleO8rawValueSSvp",
+            "mangledName": "$s14partnersdk_ios8RoomRoleO8rawValueSSvp",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios8RoomRoleO8rawValueSSvg",
+                "mangledName": "$s14partnersdk_ios8RoomRoleO8rawValueSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14partnersdk_ios8RoomRoleO",
+        "mangledName": "$s14partnersdk_ios8RoomRoleO",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcConfig",
+        "printedName": "RtcConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "webrtcServiceUrl",
+            "printedName": "webrtcServiceUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.EndpointUrl?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrl",
+                    "printedName": "partnersdk_ios.EndpointUrl",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcConfigV16webrtcServiceUrlAA08EndpointG0VSgvp",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV16webrtcServiceUrlAA08EndpointG0VSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "partnersdk_ios.EndpointUrl?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EndpointUrl",
+                        "printedName": "partnersdk_ios.EndpointUrl",
+                        "usr": "s:14partnersdk_ios11EndpointUrlV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcConfigV16webrtcServiceUrlAA08EndpointG0VSgvg",
+                "mangledName": "$s14partnersdk_ios9RtcConfigV16webrtcServiceUrlAA08EndpointG0VSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backendBaseUrl",
+            "printedName": "backendBaseUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EndpointUrl",
+                "printedName": "partnersdk_ios.EndpointUrl",
+                "usr": "s:14partnersdk_ios11EndpointUrlV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvp",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrl",
+                    "printedName": "partnersdk_ios.EndpointUrl",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvg",
+                "mangledName": "$s14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backendTokenPath",
+            "printedName": "backendTokenPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcConfigV16backendTokenPathSSvp",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV16backendTokenPathSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcConfigV16backendTokenPathSSvg",
+                "mangledName": "$s14partnersdk_ios9RtcConfigV16backendTokenPathSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "apiPrefix",
+            "printedName": "apiPrefix",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcConfigV9apiPrefixSSvp",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV9apiPrefixSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcConfigV9apiPrefixSSvg",
+                "mangledName": "$s14partnersdk_ios9RtcConfigV9apiPrefixSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ttlSeconds",
+            "printedName": "ttlSeconds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9RtcConfigV10ttlSecondsSivp",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV10ttlSecondsSivp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9RtcConfigV10ttlSecondsSivg",
+                "mangledName": "$s14partnersdk_ios9RtcConfigV10ttlSecondsSivg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(webrtcServiceUrl:backendBaseUrl:backendTokenPath:apiPrefix:ttlSeconds:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcConfig",
+                "printedName": "partnersdk_ios.RtcConfig",
+                "usr": "s:14partnersdk_ios9RtcConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.EndpointUrl?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EndpointUrl",
+                    "printedName": "partnersdk_ios.EndpointUrl",
+                    "usr": "s:14partnersdk_ios11EndpointUrlV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EndpointUrl",
+                "printedName": "partnersdk_ios.EndpointUrl",
+                "usr": "s:14partnersdk_ios11EndpointUrlV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios9RtcConfigV16webrtcServiceUrl011backendBaseG00H9TokenPath9apiPrefix10ttlSecondsAcA08EndpointG0VSg_AJS2SSitcfc",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV16webrtcServiceUrl011backendBaseG00H9TokenPath9apiPrefix10ttlSecondsAcA08EndpointG0VSg_AJS2SSitcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios9RtcConfigV",
+        "mangledName": "$s14partnersdk_ios9RtcConfigV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcParticipant",
+        "printedName": "RtcParticipant",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identity",
+            "printedName": "identity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios14RtcParticipantV8identitySSvp",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV8identitySSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios14RtcParticipantV8identitySSvg",
+                "mangledName": "$s14partnersdk_ios14RtcParticipantV8identitySSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios14RtcParticipantV4nameSSvp",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV4nameSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios14RtcParticipantV4nameSSvg",
+                "mangledName": "$s14partnersdk_ios14RtcParticipantV4nameSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLocal",
+            "printedName": "isLocal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios14RtcParticipantV7isLocalSbvp",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV7isLocalSbvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios14RtcParticipantV7isLocalSbvg",
+                "mangledName": "$s14partnersdk_ios14RtcParticipantV7isLocalSbvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(identity:name:isLocal:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcParticipant",
+                "printedName": "partnersdk_ios.RtcParticipant",
+                "usr": "s:14partnersdk_ios14RtcParticipantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios14RtcParticipantV8identity4name7isLocalACSS_SSSbtcfc",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV8identity4name7isLocalACSS_SSSbtcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcParticipant",
+                "printedName": "partnersdk_ios.RtcParticipant",
+                "usr": "s:14partnersdk_ios14RtcParticipantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios14RtcParticipantV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios14RtcParticipantV9hashValueSivp",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV9hashValueSivp",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios14RtcParticipantV9hashValueSivg",
+                "mangledName": "$s14partnersdk_ios14RtcParticipantV9hashValueSivg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios14RtcParticipantV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV4hash4intoys6HasherVz_tF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios14RtcParticipantV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV6encode2toys7Encoder_p_tKF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcParticipant",
+                "printedName": "partnersdk_ios.RtcParticipant",
+                "usr": "s:14partnersdk_ios14RtcParticipantV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcParticipant",
+                "printedName": "partnersdk_ios.RtcParticipant",
+                "usr": "s:14partnersdk_ios14RtcParticipantV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios14RtcParticipantV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV2eeoiySbAC_ACtFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios14RtcParticipantV",
+        "mangledName": "$s14partnersdk_ios14RtcParticipantV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcRoomState",
+        "printedName": "RtcRoomState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "disconnected",
+            "printedName": "disconnected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcRoomState.Type) -> partnersdk_ios.RtcRoomState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcRoomState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcRoomState",
+                        "printedName": "partnersdk_ios.RtcRoomState",
+                        "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO12disconnectedyA2CmF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO12disconnectedyA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "connecting",
+            "printedName": "connecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcRoomState.Type) -> partnersdk_ios.RtcRoomState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcRoomState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcRoomState",
+                        "printedName": "partnersdk_ios.RtcRoomState",
+                        "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO10connectingyA2CmF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO10connectingyA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "connected",
+            "printedName": "connected",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcRoomState.Type) -> partnersdk_ios.RtcRoomState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcRoomState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcRoomState",
+                        "printedName": "partnersdk_ios.RtcRoomState",
+                        "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO9connectedyA2CmF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO9connectedyA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcRoomState.Type) -> partnersdk_ios.RtcRoomState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcRoomState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcRoomState",
+                        "printedName": "partnersdk_ios.RtcRoomState",
+                        "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO5erroryA2CmF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO5erroryA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO2eeoiySbAC_ACtFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO9hashValueSivp",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO9hashValueSivp",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO9hashValueSivg",
+                "mangledName": "$s14partnersdk_ios12RtcRoomStateO9hashValueSivg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios12RtcRoomStateO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14partnersdk_ios12RtcRoomStateO6encode2toys7Encoder_p_tKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14partnersdk_ios12RtcRoomStateO",
+        "mangledName": "$s14partnersdk_ios12RtcRoomStateO",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcEvent",
+        "printedName": "RtcEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "participantJoined",
+            "printedName": "participantJoined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcEvent.Type) -> (Swift.String) -> partnersdk_ios.RtcEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> partnersdk_ios.RtcEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(identity: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RtcEventO17participantJoinedyACSS_tcACmF",
+            "mangledName": "$s14partnersdk_ios8RtcEventO17participantJoinedyACSS_tcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "participantLeft",
+            "printedName": "participantLeft",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcEvent.Type) -> (Swift.String) -> partnersdk_ios.RtcEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> partnersdk_ios.RtcEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(identity: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RtcEventO15participantLeftyACSS_tcACmF",
+            "mangledName": "$s14partnersdk_ios8RtcEventO15participantLeftyACSS_tcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.RtcEvent.Type) -> (Swift.String) -> partnersdk_ios.RtcEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> partnersdk_ios.RtcEvent",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(message: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.RtcEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RtcEvent",
+                        "printedName": "partnersdk_ios.RtcEvent",
+                        "usr": "s:14partnersdk_ios8RtcEventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios8RtcEventO5erroryACSS_tcACmF",
+            "mangledName": "$s14partnersdk_ios8RtcEventO5erroryACSS_tcACmF",
+            "moduleName": "partnersdk_ios"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14partnersdk_ios8RtcEventO",
+        "mangledName": "$s14partnersdk_ios8RtcEventO",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConnectParams",
+        "printedName": "ConnectParams",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "roomId",
+            "printedName": "roomId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios13ConnectParamsV6roomIdSSvp",
+            "mangledName": "$s14partnersdk_ios13ConnectParamsV6roomIdSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios13ConnectParamsV6roomIdSSvg",
+                "mangledName": "$s14partnersdk_ios13ConnectParamsV6roomIdSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "displayName",
+            "printedName": "displayName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios13ConnectParamsV11displayNameSSSgvp",
+            "mangledName": "$s14partnersdk_ios13ConnectParamsV11displayNameSSSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios13ConnectParamsV11displayNameSSSgvg",
+                "mangledName": "$s14partnersdk_ios13ConnectParamsV11displayNameSSSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "role",
+            "printedName": "role",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.RoomRole?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios13ConnectParamsV4roleAA8RoomRoleOSgvp",
+            "mangledName": "$s14partnersdk_ios13ConnectParamsV4roleAA8RoomRoleOSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "partnersdk_ios.RoomRole?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RoomRole",
+                        "printedName": "partnersdk_ios.RoomRole",
+                        "usr": "s:14partnersdk_ios8RoomRoleO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios13ConnectParamsV4roleAA8RoomRoleOSgvg",
+                "mangledName": "$s14partnersdk_ios13ConnectParamsV4roleAA8RoomRoleOSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(roomId:displayName:role:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectParams",
+                "printedName": "partnersdk_ios.ConnectParams",
+                "usr": "s:14partnersdk_ios13ConnectParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "partnersdk_ios.RoomRole?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RoomRole",
+                    "printedName": "partnersdk_ios.RoomRole",
+                    "usr": "s:14partnersdk_ios8RoomRoleO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios13ConnectParamsV6roomId11displayName4roleACSS_SSSgAA8RoomRoleOSgtcfc",
+            "mangledName": "$s14partnersdk_ios13ConnectParamsV6roomId11displayName4roleACSS_SSSgAA8RoomRoleOSgtcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios13ConnectParamsV",
+        "mangledName": "$s14partnersdk_ios13ConnectParamsV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RtcRoomInfo",
+        "printedName": "RtcRoomInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "roomId",
+            "printedName": "roomId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV6roomIdSSvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6roomIdSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV6roomIdSSvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6roomIdSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV6statusAA0cD5StateOvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6statusAA0cD5StateOvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RtcRoomState",
+                    "printedName": "partnersdk_ios.RtcRoomState",
+                    "usr": "s:14partnersdk_ios12RtcRoomStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV6statusAA0cD5StateOvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6statusAA0cD5StateOvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxParticipants",
+            "printedName": "maxParticipants",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV15maxParticipantsSiSgvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV15maxParticipantsSiSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV15maxParticipantsSiSgvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV15maxParticipantsSiSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "metadata",
+            "printedName": "metadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : partnersdk_ios.JSONValue]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : partnersdk_ios.JSONValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV8metadataSDySSAA9JSONValueOGSgvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV8metadataSDySSAA9JSONValueOGSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : partnersdk_ios.JSONValue]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : partnersdk_ios.JSONValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "partnersdk_ios.JSONValue",
+                            "usr": "s:14partnersdk_ios9JSONValueO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV8metadataSDySSAA9JSONValueOGSgvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV8metadataSDySSAA9JSONValueOGSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hostIdentity",
+            "printedName": "hostIdentity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV12hostIdentitySSvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV12hostIdentitySSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV12hostIdentitySSvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV12hostIdentitySSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "participantCount",
+            "printedName": "participantCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV16participantCountSiSgvp",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV16participantCountSiSgvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV16participantCountSiSgvg",
+                "mangledName": "$s14partnersdk_ios11RtcRoomInfoV16participantCountSiSgvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(roomId:status:maxParticipants:metadata:hostIdentity:participantCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomInfo",
+                "printedName": "partnersdk_ios.RtcRoomInfo",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomState",
+                "printedName": "partnersdk_ios.RtcRoomState",
+                "usr": "s:14partnersdk_ios12RtcRoomStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : partnersdk_ios.JSONValue]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : partnersdk_ios.JSONValue]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV6roomId6status15maxParticipants8metadata12hostIdentity16participantCountACSS_AA0cD5StateOSiSgSDySSAA9JSONValueOGSgSSALtcfc",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6roomId6status15maxParticipants8metadata12hostIdentity16participantCountACSS_AA0cD5StateOSiSgSDySSAA9JSONValueOGSgSSALtcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RtcRoomInfo",
+                "printedName": "partnersdk_ios.RtcRoomInfo",
+                "usr": "s:14partnersdk_ios11RtcRoomInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios11RtcRoomInfoV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14partnersdk_ios11RtcRoomInfoV6encode2toys7Encoder_p_tKF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios11RtcRoomInfoV",
+        "mangledName": "$s14partnersdk_ios11RtcRoomInfoV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MediaCredentials",
+        "printedName": "MediaCredentials",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "url",
+            "printedName": "url",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios16MediaCredentialsV3urlSSvp",
+            "mangledName": "$s14partnersdk_ios16MediaCredentialsV3urlSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV3urlSSvg",
+                "mangledName": "$s14partnersdk_ios16MediaCredentialsV3urlSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "token",
+            "printedName": "token",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios16MediaCredentialsV5tokenSSvp",
+            "mangledName": "$s14partnersdk_ios16MediaCredentialsV5tokenSSvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV5tokenSSvg",
+                "mangledName": "$s14partnersdk_ios16MediaCredentialsV5tokenSSvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(url:token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentials",
+                "printedName": "partnersdk_ios.MediaCredentials",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios16MediaCredentialsV3url5tokenACSS_SStcfc",
+            "mangledName": "$s14partnersdk_ios16MediaCredentialsV3url5tokenACSS_SStcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentials",
+                "printedName": "partnersdk_ios.MediaCredentials",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios16MediaCredentialsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14partnersdk_ios16MediaCredentialsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios16MediaCredentialsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14partnersdk_ios16MediaCredentialsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios16MediaCredentialsV",
+        "mangledName": "$s14partnersdk_ios16MediaCredentialsV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JSONValue",
+        "printedName": "JSONValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> (Swift.String) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO6stringyACSScACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO6stringyACSScACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "int",
+            "printedName": "int",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> (Swift.Int) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO3intyACSicACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO3intyACSicACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "double",
+            "printedName": "double",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> (Swift.Double) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO6doubleyACSdcACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO6doubleyACSdcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "bool",
+            "printedName": "bool",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> (Swift.Bool) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO4boolyACSbcACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO4boolyACSbcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "object",
+            "printedName": "object",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> ([Swift.String : partnersdk_ios.JSONValue]) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.String : partnersdk_ios.JSONValue]) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : partnersdk_ios.JSONValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "partnersdk_ios.JSONValue",
+                            "usr": "s:14partnersdk_ios9JSONValueO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO6objectyACSDySSACGcACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO6objectyACSDySSACGcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "array",
+            "printedName": "array",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> ([partnersdk_ios.JSONValue]) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([partnersdk_ios.JSONValue]) -> partnersdk_ios.JSONValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[partnersdk_ios.JSONValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "JSONValue",
+                            "printedName": "partnersdk_ios.JSONValue",
+                            "usr": "s:14partnersdk_ios9JSONValueO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO5arrayyACSayACGcACmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO5arrayyACSayACGcACmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "null",
+            "printedName": "null",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.JSONValue.Type) -> partnersdk_ios.JSONValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "JSONValue",
+                    "printedName": "partnersdk_ios.JSONValue",
+                    "usr": "s:14partnersdk_ios9JSONValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "partnersdk_ios.JSONValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "JSONValue",
+                        "printedName": "partnersdk_ios.JSONValue",
+                        "usr": "s:14partnersdk_ios9JSONValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14partnersdk_ios9JSONValueO4nullyA2CmF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO4nullyA2CmF",
+            "moduleName": "partnersdk_ios"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JSONValue",
+                "printedName": "partnersdk_ios.JSONValue",
+                "usr": "s:14partnersdk_ios9JSONValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios9JSONValueO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14partnersdk_ios9JSONValueO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9JSONValueO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO6encode2toys7Encoder_p_tKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios9JSONValueO9hashValueSivp",
+            "mangledName": "$s14partnersdk_ios9JSONValueO9hashValueSivp",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios9JSONValueO9hashValueSivg",
+                "mangledName": "$s14partnersdk_ios9JSONValueO9hashValueSivg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9JSONValueO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14partnersdk_ios9JSONValueO4hash4intoys6HasherVz_tF",
+            "moduleName": "partnersdk_ios",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JSONValue",
+                "printedName": "partnersdk_ios.JSONValue",
+                "usr": "s:14partnersdk_ios9JSONValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JSONValue",
+                "printedName": "partnersdk_ios.JSONValue",
+                "usr": "s:14partnersdk_ios9JSONValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9JSONValueO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14partnersdk_ios9JSONValueO2eeoiySbAC_ACtFZ",
+            "moduleName": "partnersdk_ios",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14partnersdk_ios9JSONValueO",
+        "mangledName": "$s14partnersdk_ios9JSONValueO",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
+      "kind": "Array",
+      "offset": 915,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1438,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8837,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8866,
+      "length": 5,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 2089,
+      "length": 6,
+      "value": "\"HOST\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 2115,
+      "length": 9,
+      "value": "\"SPEAKER\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 2145,
+      "length": 10,
+      "value": "\"LISTENER\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 2939,
+      "length": 15,
+      "value": "\"\/webrtc\/token\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 2984,
+      "length": 9,
+      "value": "\"\/webrtc\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3021,
+      "length": 4,
+      "value": "3600"
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 14,
+      "value": "\"__HTTP_404__\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 247,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 12,
+      "value": "\"connection\""
+    }
+  ]
+}
