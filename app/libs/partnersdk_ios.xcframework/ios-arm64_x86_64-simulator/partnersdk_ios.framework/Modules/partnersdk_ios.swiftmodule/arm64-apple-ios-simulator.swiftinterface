@@ -20,19 +20,12 @@ import _SwiftConcurrencyShims
   @_Concurrency.MainActor final public var onEvent: partnersdk_ios.RtcClient.EventHandler?
   @_Concurrency.MainActor final public var onStateChanged: partnersdk_ios.RtcClient.StateHandler?
   @_Concurrency.MainActor final public var onParticipantsChanged: partnersdk_ios.RtcClient.ParticipantsHandler?
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor public static func create(config: partnersdk_ios.RtcConfig, authHeaderProvider: (any partnersdk_ios.AuthHeaderProvider)? = nil, urlSession: Foundation.URLSession = .shared) -> partnersdk_ios.RtcClient
-  #endif
-  @_Concurrency.MainActor final public func connect(_ params: partnersdk_ios.ConnectParams) async throws
+  @_Concurrency.MainActor public static func create(config: partnersdk_ios.RtcConfig = RtcConfig()) -> partnersdk_ios.RtcClient
+  @_Concurrency.MainActor final public func connect(_ params: partnersdk_ios.ConnectParams, credentials: partnersdk_ios.MediaCredentials) async throws
+  @_Concurrency.MainActor final public func connect(_ params: partnersdk_ios.ConnectParams, credentialsProvider: any partnersdk_ios.MediaCredentialsProvider) async throws
   @_Concurrency.MainActor final public func disconnect() async
   @_Concurrency.MainActor final public func close()
   @_Concurrency.MainActor final public func setMicrophoneMuted(_ muted: Swift.Bool) async throws
-  @_Concurrency.MainActor final public func muteParticipant(identity: Swift.String, muted: Swift.Bool) async throws
-  @_Concurrency.MainActor final public func kickParticipant(identity: Swift.String) async throws
-  @_Concurrency.MainActor final public func setParticipantRole(identity: Swift.String, role: partnersdk_ios.RoomRole) async throws
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor final public func listParticipants(roomId: Swift.String? = nil) async throws -> [partnersdk_ios.RtcParticipant]
-  #endif
   public enum NetworkError : Swift.Error {
     case invalidResponse
     case httpStatus(code: Swift.Int, body: Swift.String)
@@ -60,19 +53,6 @@ public struct EndpointUrl : Swift.Hashable, Swift.Sendable {
     get
   }
 }
-public protocol AuthHeaderProvider : Swift.Sendable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  func getAuthorizationHeaderValue() async -> Swift.String?
-  #endif
-}
-public struct AnyAuthHeaderProvider : partnersdk_ios.AuthHeaderProvider {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(_ block: @escaping @Sendable () async -> Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getAuthorizationHeaderValue() async -> Swift.String?
-  #endif
-}
 public enum RoomRole : Swift.String, Swift.Sendable, Swift.Codable {
   case host
   case speaker
@@ -87,19 +67,16 @@ public enum RoomRole : Swift.String, Swift.Sendable, Swift.Codable {
 }
 public struct RtcConfig : Swift.Sendable {
   public let webrtcServiceUrl: partnersdk_ios.EndpointUrl?
-  public let backendBaseUrl: partnersdk_ios.EndpointUrl
-  public let backendTokenPath: Swift.String
-  public let apiPrefix: Swift.String
-  public let ttlSeconds: Swift.Int
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(webrtcServiceUrl: partnersdk_ios.EndpointUrl? = nil, backendBaseUrl: partnersdk_ios.EndpointUrl, backendTokenPath: Swift.String = "/webrtc/token", apiPrefix: Swift.String = "/webrtc", ttlSeconds: Swift.Int = 3600)
+  public init(webrtcServiceUrl: partnersdk_ios.EndpointUrl? = nil)
   #endif
 }
 public struct RtcParticipant : Swift.Hashable, Swift.Sendable, Swift.Codable {
   public let identity: Swift.String
   public let name: Swift.String
   public let isLocal: Swift.Bool
-  public init(identity: Swift.String, name: Swift.String, isLocal: Swift.Bool)
+  public let isMicrophoneMuted: Swift.Bool
+  public init(identity: Swift.String, name: Swift.String, isLocal: Swift.Bool, isMicrophoneMuted: Swift.Bool = false)
   public static func == (a: partnersdk_ios.RtcParticipant, b: partnersdk_ios.RtcParticipant) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public func hash(into hasher: inout Swift.Hasher)
@@ -131,6 +108,13 @@ public struct ConnectParams : Swift.Sendable {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(roomId: Swift.String, displayName: Swift.String? = nil, role: partnersdk_ios.RoomRole? = nil)
   #endif
+}
+public protocol MediaCredentialsProvider : Swift.Sendable {
+  func getMediaCredentials(params: partnersdk_ios.ConnectParams) async throws -> partnersdk_ios.MediaCredentials
+}
+public struct AnyMediaCredentialsProvider : partnersdk_ios.MediaCredentialsProvider {
+  public init(_ handler: @escaping @Sendable (partnersdk_ios.ConnectParams) async throws -> partnersdk_ios.MediaCredentials)
+  public func getMediaCredentials(params: partnersdk_ios.ConnectParams) async throws -> partnersdk_ios.MediaCredentials
 }
 public struct RtcRoomInfo : Swift.Sendable, Swift.Codable {
   public let roomId: Swift.String

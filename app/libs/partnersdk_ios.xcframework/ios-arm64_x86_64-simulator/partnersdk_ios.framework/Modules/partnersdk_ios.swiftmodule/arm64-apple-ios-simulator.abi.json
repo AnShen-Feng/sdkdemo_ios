@@ -653,7 +653,7 @@
           {
             "kind": "Function",
             "name": "create",
-            "printedName": "create(config:authHeaderProvider:urlSession:)",
+            "printedName": "create(config:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -665,34 +665,13 @@
                 "kind": "TypeNominal",
                 "name": "RtcConfig",
                 "printedName": "partnersdk_ios.RtcConfig",
+                "hasDefaultArg": true,
                 "usr": "s:14partnersdk_ios9RtcConfigV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any partnersdk_ios.AuthHeaderProvider)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AuthHeaderProvider",
-                    "printedName": "any partnersdk_ios.AuthHeaderProvider",
-                    "usr": "s:14partnersdk_ios18AuthHeaderProviderP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSURLSession"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC6create6config18authHeaderProvider10urlSessionAcA0C6ConfigV_AA04AuthhI0_pSgSo12NSURLSessionCtFZ",
-            "mangledName": "$s14partnersdk_ios9RtcClientC6create6config18authHeaderProvider10urlSessionAcA0C6ConfigV_AA04AuthhI0_pSgSo12NSURLSessionCtFZ",
+            "usr": "s:14partnersdk_ios9RtcClientC6create6configAcA0C6ConfigV_tFZ",
+            "mangledName": "$s14partnersdk_ios9RtcClientC6create6configAcA0C6ConfigV_tFZ",
             "moduleName": "partnersdk_ios",
             "static": true,
             "declAttributes": [
@@ -706,7 +685,7 @@
           {
             "kind": "Function",
             "name": "connect",
-            "printedName": "connect(_:)",
+            "printedName": "connect(_:credentials:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -718,11 +697,53 @@
                 "name": "ConnectParams",
                 "printedName": "partnersdk_ios.ConnectParams",
                 "usr": "s:14partnersdk_ios13ConnectParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentials",
+                "printedName": "partnersdk_ios.MediaCredentials",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC7connectyyAA13ConnectParamsVYaKF",
-            "mangledName": "$s14partnersdk_ios9RtcClientC7connectyyAA13ConnectParamsVYaKF",
+            "usr": "s:14partnersdk_ios9RtcClientC7connect_11credentialsyAA13ConnectParamsV_AA16MediaCredentialsVtYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC7connect_11credentialsyAA13ConnectParamsV_AA16MediaCredentialsVtYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(_:credentialsProvider:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectParams",
+                "printedName": "partnersdk_ios.ConnectParams",
+                "usr": "s:14partnersdk_ios13ConnectParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentialsProvider",
+                "printedName": "any partnersdk_ios.MediaCredentialsProvider",
+                "usr": "s:14partnersdk_ios24MediaCredentialsProviderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios9RtcClientC7connect_19credentialsProvideryAA13ConnectParamsV_AA016MediaCredentialsG0_ptYaKF",
+            "mangledName": "$s14partnersdk_ios9RtcClientC7connect_19credentialsProvideryAA13ConnectParamsV_AA016MediaCredentialsG0_ptYaKF",
             "moduleName": "partnersdk_ios",
             "declAttributes": [
               "Custom",
@@ -803,156 +824,6 @@
             "declAttributes": [
               "Custom",
               "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "muteParticipant",
-            "printedName": "muteParticipant(identity:muted:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC15muteParticipant8identity5mutedySS_SbtYaKF",
-            "mangledName": "$s14partnersdk_ios9RtcClientC15muteParticipant8identity5mutedySS_SbtYaKF",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "Custom",
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "kickParticipant",
-            "printedName": "kickParticipant(identity:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC15kickParticipant8identityySS_tYaKF",
-            "mangledName": "$s14partnersdk_ios9RtcClientC15kickParticipant8identityySS_tYaKF",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "Custom",
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setParticipantRole",
-            "printedName": "setParticipantRole(identity:role:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RoomRole",
-                "printedName": "partnersdk_ios.RoomRole",
-                "usr": "s:14partnersdk_ios8RoomRoleO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC18setParticipantRole8identity4roleySS_AA04RoomG0OtYaKF",
-            "mangledName": "$s14partnersdk_ios9RtcClientC18setParticipantRole8identity4roleySS_AA04RoomG0OtYaKF",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "Custom",
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "listParticipants",
-            "printedName": "listParticipants(roomId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[partnersdk_ios.RtcParticipant]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RtcParticipant",
-                    "printedName": "partnersdk_ios.RtcParticipant",
-                    "usr": "s:14partnersdk_ios14RtcParticipantV"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios9RtcClientC16listParticipants6roomIdSayAA0C11ParticipantVGSSSg_tYaKF",
-            "mangledName": "$s14partnersdk_ios9RtcClientC16listParticipants6roomIdSayAA0C11ParticipantVGSSSg_tYaKF",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "Final",
-              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -1659,211 +1530,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AuthHeaderProvider",
-        "printedName": "AuthHeaderProvider",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getAuthorizationHeaderValue",
-            "printedName": "getAuthorizationHeaderValue()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios18AuthHeaderProviderP016getAuthorizationD5ValueSSSgyYaF",
-            "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP016getAuthorizationD5ValueSSSgyYaF",
-            "moduleName": "partnersdk_ios",
-            "genericSig": "<τ_0_0 where τ_0_0 : partnersdk_ios.AuthHeaderProvider>",
-            "sugared_genericSig": "<Self where Self : partnersdk_ios.AuthHeaderProvider>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:14partnersdk_ios18AuthHeaderProviderP",
-        "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP",
-        "moduleName": "partnersdk_ios",
-        "genericSig": "<τ_0_0 : Swift.Sendable>",
-        "sugared_genericSig": "<Self : Swift.Sendable>",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "AnyAuthHeaderProvider",
-        "printedName": "AnyAuthHeaderProvider",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AnyAuthHeaderProvider",
-                "printedName": "partnersdk_ios.AnyAuthHeaderProvider",
-                "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() async -> Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderVyACSSSgyYaYbccfc",
-            "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderVyACSSSgyYaYbccfc",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "getAuthorizationHeaderValue",
-            "printedName": "getAuthorizationHeaderValue()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV016getAuthorizationE5ValueSSSgyYaF",
-            "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderV016getAuthorizationE5ValueSSSgyYaF",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:14partnersdk_ios21AnyAuthHeaderProviderV",
-        "mangledName": "$s14partnersdk_ios21AnyAuthHeaderProviderV",
-        "moduleName": "partnersdk_ios",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "AuthHeaderProvider",
-            "printedName": "AuthHeaderProvider",
-            "usr": "s:14partnersdk_ios18AuthHeaderProviderP",
-            "mangledName": "$s14partnersdk_ios18AuthHeaderProviderP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "RoomRole",
         "printedName": "RoomRole",
         "children": [
@@ -2207,185 +1873,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "backendBaseUrl",
-            "printedName": "backendBaseUrl",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "EndpointUrl",
-                "printedName": "partnersdk_ios.EndpointUrl",
-                "usr": "s:14partnersdk_ios11EndpointUrlV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvp",
-            "mangledName": "$s14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvp",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EndpointUrl",
-                    "printedName": "partnersdk_ios.EndpointUrl",
-                    "usr": "s:14partnersdk_ios11EndpointUrlV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvg",
-                "mangledName": "$s14partnersdk_ios9RtcConfigV14backendBaseUrlAA08EndpointG0Vvg",
-                "moduleName": "partnersdk_ios",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "backendTokenPath",
-            "printedName": "backendTokenPath",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14partnersdk_ios9RtcConfigV16backendTokenPathSSvp",
-            "mangledName": "$s14partnersdk_ios9RtcConfigV16backendTokenPathSSvp",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14partnersdk_ios9RtcConfigV16backendTokenPathSSvg",
-                "mangledName": "$s14partnersdk_ios9RtcConfigV16backendTokenPathSSvg",
-                "moduleName": "partnersdk_ios",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "apiPrefix",
-            "printedName": "apiPrefix",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14partnersdk_ios9RtcConfigV9apiPrefixSSvp",
-            "mangledName": "$s14partnersdk_ios9RtcConfigV9apiPrefixSSvp",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14partnersdk_ios9RtcConfigV9apiPrefixSSvg",
-                "mangledName": "$s14partnersdk_ios9RtcConfigV9apiPrefixSSvg",
-                "moduleName": "partnersdk_ios",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "ttlSeconds",
-            "printedName": "ttlSeconds",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14partnersdk_ios9RtcConfigV10ttlSecondsSivp",
-            "mangledName": "$s14partnersdk_ios9RtcConfigV10ttlSecondsSivp",
-            "moduleName": "partnersdk_ios",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14partnersdk_ios9RtcConfigV10ttlSecondsSivg",
-                "mangledName": "$s14partnersdk_ios9RtcConfigV10ttlSecondsSivg",
-                "moduleName": "partnersdk_ios",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(webrtcServiceUrl:backendBaseUrl:backendTokenPath:apiPrefix:ttlSeconds:)",
+            "printedName": "init(webrtcServiceUrl:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2407,38 +1897,11 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "EndpointUrl",
-                "printedName": "partnersdk_ios.EndpointUrl",
-                "usr": "s:14partnersdk_ios11EndpointUrlV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "hasDefaultArg": true,
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14partnersdk_ios9RtcConfigV16webrtcServiceUrl011backendBaseG00H9TokenPath9apiPrefix10ttlSecondsAcA08EndpointG0VSg_AJS2SSitcfc",
-            "mangledName": "$s14partnersdk_ios9RtcConfigV16webrtcServiceUrl011backendBaseG00H9TokenPath9apiPrefix10ttlSecondsAcA08EndpointG0VSg_AJS2SSitcfc",
+            "usr": "s:14partnersdk_ios9RtcConfigV16webrtcServiceUrlAcA08EndpointG0VSg_tcfc",
+            "mangledName": "$s14partnersdk_ios9RtcConfigV16webrtcServiceUrlAcA08EndpointG0VSg_tcfc",
             "moduleName": "partnersdk_ios",
             "declAttributes": [
               "AccessControl"
@@ -2483,16 +1946,6 @@
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "partnersdk_ios",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -2653,9 +2106,53 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isMicrophoneMuted",
+            "printedName": "isMicrophoneMuted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14partnersdk_ios14RtcParticipantV17isMicrophoneMutedSbvp",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV17isMicrophoneMutedSbvp",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14partnersdk_ios14RtcParticipantV17isMicrophoneMutedSbvg",
+                "mangledName": "$s14partnersdk_ios14RtcParticipantV17isMicrophoneMutedSbvg",
+                "moduleName": "partnersdk_ios",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(identity:name:isLocal:)",
+            "printedName": "init(identity:name:isLocal:isMicrophoneMuted:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2680,11 +2177,18 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14partnersdk_ios14RtcParticipantV8identity4name7isLocalACSS_SSSbtcfc",
-            "mangledName": "$s14partnersdk_ios14RtcParticipantV8identity4name7isLocalACSS_SSSbtcfc",
+            "usr": "s:14partnersdk_ios14RtcParticipantV8identity4name7isLocal0G15MicrophoneMutedACSS_SSS2btcfc",
+            "mangledName": "$s14partnersdk_ios14RtcParticipantV8identity4name7isLocal0G15MicrophoneMutedACSS_SSS2btcfc",
             "moduleName": "partnersdk_ios",
             "declAttributes": [
               "AccessControl"
@@ -3745,6 +3249,202 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MediaCredentialsProvider",
+        "printedName": "MediaCredentialsProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getMediaCredentials",
+            "printedName": "getMediaCredentials(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentials",
+                "printedName": "partnersdk_ios.MediaCredentials",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectParams",
+                "printedName": "partnersdk_ios.ConnectParams",
+                "usr": "s:14partnersdk_ios13ConnectParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios24MediaCredentialsProviderP03getcD06paramsAA0cD0VAA13ConnectParamsV_tYaKF",
+            "mangledName": "$s14partnersdk_ios24MediaCredentialsProviderP03getcD06paramsAA0cD0VAA13ConnectParamsV_tYaKF",
+            "moduleName": "partnersdk_ios",
+            "genericSig": "<τ_0_0 where τ_0_0 : partnersdk_ios.MediaCredentialsProvider>",
+            "sugared_genericSig": "<Self where Self : partnersdk_ios.MediaCredentialsProvider>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14partnersdk_ios24MediaCredentialsProviderP",
+        "mangledName": "$s14partnersdk_ios24MediaCredentialsProviderP",
+        "moduleName": "partnersdk_ios",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyMediaCredentialsProvider",
+        "printedName": "AnyMediaCredentialsProvider",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyMediaCredentialsProvider",
+                "printedName": "partnersdk_ios.AnyMediaCredentialsProvider",
+                "usr": "s:14partnersdk_ios27AnyMediaCredentialsProviderV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(partnersdk_ios.ConnectParams) async throws -> partnersdk_ios.MediaCredentials",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MediaCredentials",
+                    "printedName": "partnersdk_ios.MediaCredentials",
+                    "usr": "s:14partnersdk_ios16MediaCredentialsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectParams",
+                    "printedName": "partnersdk_ios.ConnectParams",
+                    "usr": "s:14partnersdk_ios13ConnectParamsV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14partnersdk_ios27AnyMediaCredentialsProviderVyAcA0dE0VAA13ConnectParamsVYaYbKccfc",
+            "mangledName": "$s14partnersdk_ios27AnyMediaCredentialsProviderVyAcA0dE0VAA13ConnectParamsVYaYbKccfc",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getMediaCredentials",
+            "printedName": "getMediaCredentials(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaCredentials",
+                "printedName": "partnersdk_ios.MediaCredentials",
+                "usr": "s:14partnersdk_ios16MediaCredentialsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectParams",
+                "printedName": "partnersdk_ios.ConnectParams",
+                "usr": "s:14partnersdk_ios13ConnectParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14partnersdk_ios27AnyMediaCredentialsProviderV03getdE06paramsAA0dE0VAA13ConnectParamsV_tYaKF",
+            "mangledName": "$s14partnersdk_ios27AnyMediaCredentialsProviderV03getdE06paramsAA0dE0VAA13ConnectParamsV_tYaKF",
+            "moduleName": "partnersdk_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14partnersdk_ios27AnyMediaCredentialsProviderV",
+        "mangledName": "$s14partnersdk_ios27AnyMediaCredentialsProviderV",
+        "moduleName": "partnersdk_ios",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MediaCredentialsProvider",
+            "printedName": "MediaCredentialsProvider",
+            "usr": "s:14partnersdk_ios24MediaCredentialsProviderP",
+            "mangledName": "$s14partnersdk_ios24MediaCredentialsProviderP"
           },
           {
             "kind": "Conformance",
@@ -5128,72 +4828,37 @@
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
       "kind": "Array",
-      "offset": 915,
+      "offset": 897,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 1438,
+      "offset": 1249,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8837,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcClient.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8866,
-      "length": 5,
-      "value": "1000"
-    },
-    {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2089,
+      "offset": 1487,
       "length": 6,
       "value": "\"HOST\""
     },
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2115,
+      "offset": 1513,
       "length": 9,
       "value": "\"SPEAKER\""
     },
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2145,
+      "offset": 1543,
       "length": 10,
       "value": "\"LISTENER\""
-    },
-    {
-      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
-      "kind": "StringLiteral",
-      "offset": 2939,
-      "length": 15,
-      "value": "\"\/webrtc\/token\""
-    },
-    {
-      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
-      "kind": "StringLiteral",
-      "offset": 2984,
-      "length": 9,
-      "value": "\"\/webrtc\""
-    },
-    {
-      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConfig.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3021,
-      "length": 4,
-      "value": "3600"
     },
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConstants.swift",
@@ -5212,9 +4877,16 @@
     {
       "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcConstants.swift",
       "kind": "StringLiteral",
-      "offset": 285,
-      "length": 12,
-      "value": "\"connection\""
+      "offset": 282,
+      "length": 9,
+      "value": "\"livekit\""
+    },
+    {
+      "filePath": "\/Users\/zero\/Documents\/Work\/Squady\/Squady\/partnersdk_ios\/partnersdkcore\/RtcModels.swift",
+      "kind": "BooleanLiteral",
+      "offset": 385,
+      "length": 5,
+      "value": "false"
     }
   ]
 }

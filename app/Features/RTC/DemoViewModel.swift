@@ -35,7 +35,7 @@ final class DemoViewModel: ObservableObject {
         }
     }
 
-    @Published var backendBaseUrl: String = "http://192.168.3.140:3003"
+    @Published var gatewayBaseUrl: String = "http://192.168.3.140:3003"
     @Published var roomId: String = "demo-room"
     @Published var displayName: String = "DemoUser"
     @Published var businessToken: String = ""
@@ -51,6 +51,9 @@ final class DemoViewModel: ObservableObject {
     @Published var hostIdentity: String?
 
     private var client: RtcClient?
+    private var backend: DemoRtcBackend?
+    private var backendToken: String?
+    private var activeRoomId: String?
     private var localRole: DemoRole = .speaker
 
     var connectButtonTitle: String {
@@ -115,36 +118,44 @@ final class DemoViewModel: ObservableObject {
         do {
             lastError = ""
             lastMessage = ""
-            guard !normalizedBusinessToken().isEmpty else {
-                lastError = "请先填写业务登录令牌"
+            let accessToken = normalizedAccessToken()
+            guard !accessToken.isEmpty else {
+                lastError = "请先填写 WebRTC 访问令牌"
                 return
             }
-            guard let endpoint = EndpointUrl.parseOrNull(backendBaseUrl) else {
-                lastError = "BE 地址不合法"
+            guard let endpoint = EndpointUrl.parseOrNull(gatewayBaseUrl) else {
+                lastError = "Gateway 地址不合法"
                 return
-            }
-
-            let capturedToken = businessToken
-            let authProvider = AnyAuthHeaderProvider {
-                let token = capturedToken.trimmingCharacters(in: .whitespacesAndNewlines)
-                if token.isEmpty { return nil }
-                return token.hasPrefix("Bearer ") ? token : "Bearer \(token)"
             }
 
             client?.close()
-            let rtc = RtcClient.create(
-                config: RtcConfig(backendBaseUrl: endpoint),
-                authHeaderProvider: authProvider
-            )
+            let rtc = RtcClient.create(config: RtcConfig())
+            let backend = DemoRtcBackend(gatewayBaseUrl: endpoint)
             bindCallbacks(for: rtc)
             client = rtc
+            self.backend = backend
 
             let normalizedRoomId = roomId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "demo-room" : roomId.trimmingCharacters(in: .whitespacesAndNewlines)
             let normalizedName = displayName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "User-\(Int(Date().timeIntervalSince1970) % 10000)" : displayName.trimmingCharacters(in: .whitespacesAndNewlines)
             localRole = selectedRole
 
-            lastMessage = "开始连接 roomId=\(normalizedRoomId), user=\(normalizedName), role=\(selectedRole.sdkRole.rawValue)"
-            try await rtc.connect(ConnectParams(roomId: normalizedRoomId, displayName: normalizedName, role: selectedRole.sdkRole))
+            lastMessage = "宿主开始 join HTTP 请求 roomId=\(normalizedRoomId), user=\(normalizedName), role=\(selectedRole.sdkRole.rawValue)"
+            backendToken = accessToken
+            activeRoomId = normalizedRoomId
+            let params = ConnectParams(roomId: normalizedRoomId, displayName: normalizedName, role: selectedRole.sdkRole)
+            try await rtc.connect(
+                params,
+                credentialsProvider: AnyMediaCredentialsProvider { requestParams in
+                    try await backend.joinRoom(
+                        accessToken: accessToken,
+                        roomId: requestParams.roomId,
+                        displayName: requestParams.displayName,
+                        role: requestParams.role,
+                        ttlSeconds: Self.defaultTTLSeconds
+                    )
+                }
+            )
+            lastMessage = "媒体服务连接成功"
             muted = false
             if selectedRole != .host {
                 hostIdentity = nil
@@ -157,6 +168,8 @@ final class DemoViewModel: ObservableObject {
     private func disconnect() async {
         lastMessage = "主动断开连接"
         await client?.disconnect()
+        backendToken = nil
+        activeRoomId = nil
         participants = []
         muted = false
         hostIdentity = nil
@@ -177,9 +190,9 @@ final class DemoViewModel: ObservableObject {
     }
 
     private func refreshParticipants() async {
-        guard let client else { return }
+        guard let backend, let token = backendToken, let roomId = activeRoomId else { return }
         do {
-            let list = try await client.listParticipants()
+            let list = try await backend.listParticipants(accessToken: token, roomId: roomId)
             participants = list
             updateHostFromParticipantsIfNeeded(list)
             lastMessage = "命令成功: listParticipants size=\(list.count)"
@@ -189,9 +202,9 @@ final class DemoViewModel: ObservableObject {
     }
 
     private func muteTarget(muted: Bool) async {
-        guard let client, let identity = normalizedTargetIdentity() else { return }
+        guard let backend, let token = backendToken, let roomId = activeRoomId, let identity = normalizedTargetIdentity() else { return }
         do {
-            try await client.muteParticipant(identity: identity, muted: muted)
+            try await backend.muteParticipant(accessToken: token, roomId: roomId, identity: identity, muted: muted)
             lastMessage = "命令成功: mute identity=\(identity) muted=\(muted)"
         } catch {
             lastError = "命令失败: mute identity=\(identity) muted=\(muted)：\(error.localizedDescription)"
@@ -199,9 +212,9 @@ final class DemoViewModel: ObservableObject {
     }
 
     private func kickTarget() async {
-        guard let client, let identity = normalizedTargetIdentity() else { return }
+        guard let backend, let token = backendToken, let roomId = activeRoomId, let identity = normalizedTargetIdentity() else { return }
         do {
-            try await client.kickParticipant(identity: identity)
+            try await backend.kickParticipant(accessToken: token, roomId: roomId, identity: identity)
             lastMessage = "命令成功: kick identity=\(identity)"
         } catch {
             lastError = "命令失败: kick identity=\(identity)：\(error.localizedDescription)"
@@ -209,9 +222,9 @@ final class DemoViewModel: ObservableObject {
     }
 
     private func setTargetRole(_ role: DemoRole) async {
-        guard let client, let identity = normalizedTargetIdentity() else { return }
+        guard let backend, let token = backendToken, let roomId = activeRoomId, let identity = normalizedTargetIdentity() else { return }
         do {
-            try await client.setParticipantRole(identity: identity, role: role.sdkRole)
+            try await backend.setParticipantRole(accessToken: token, roomId: roomId, identity: identity, role: role.sdkRole)
             if role == .host {
                 hostIdentity = identity
             } else if hostIdentity == identity {
@@ -290,7 +303,9 @@ final class DemoViewModel: ObservableObject {
         return identity
     }
 
-    private func normalizedBusinessToken() -> String {
+    private func normalizedAccessToken() -> String {
         businessToken.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+
+    private static let defaultTTLSeconds = 3600
 }

@@ -17,14 +17,14 @@ struct ContentView: View {
                 }
 
                 Section("连接配置") {
-                    TextField("请输入 BE 地址", text: $vm.backendBaseUrl)
+                    TextField("请输入 Gateway 地址", text: $vm.gatewayBaseUrl)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.URL)
                     TextField("例如：demo-room", text: $vm.roomId)
                         .textInputAutocapitalization(.never)
                     TextField("例如：Alice", text: $vm.displayName)
                         .textInputAutocapitalization(.never)
-                    TextField("粘贴用户 JWT（可带或不带 Bearer 前缀）", text: $vm.businessToken)
+                    TextField("粘贴 WebRTC 访问令牌（可带或不带 Bearer 前缀）", text: $vm.businessToken)
                         .textInputAutocapitalization(.never)
                     Picker("入房角色", selection: $vm.selectedRole) {
                         ForEach(DemoViewModel.DemoRole.allCases) { role in
